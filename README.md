@@ -9,6 +9,9 @@
   <a href="https://arxiv.org/abs/2605.12013">
     <img src="https://img.shields.io/badge/arXiv-2605.12013-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv">
   </a>
+  <a href="https://huggingface.co/datasets/zhen-nan/L2P-dataset">
+    <img src="https://img.shields.io/badge/Dataset-L2P-ffcc4d?style=for-the-badge&logo=huggingface&logoColor=white" alt="Dataset">
+  </a>
 </p>
 
 <p>
@@ -56,6 +59,11 @@ pip install -e .
 
 
 ## 🎨 Inference
+Checkpoint:
+| Model | Params | HuggingFace |
+|-------|--------|-------------|
+|L2P-z-image (1k resolution)       |6B        |[🤗](https://huggingface.co/zhen-nan/L2P)              |
+
 ```python
 import torch
 from diffsynth.pipelines.z_image_L2P import ZImagePipeline, ModelConfig
@@ -96,6 +104,12 @@ image.save("example.png")
 ```
 
 ### Gradio Demo
+
+First, install gradio:
+
+```bash
+pip install gradio
+```
 
 Launch a multi-GPU web UI:
 
