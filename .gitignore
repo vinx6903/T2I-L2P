@@ -39,6 +39,6 @@ ckpt/
 *.safetensors
 
 # Local data / cache
-data/
-datasets/
+/data/
+/datasets/
 .cache/
