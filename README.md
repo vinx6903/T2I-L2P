@@ -27,6 +27,7 @@
 ## 📰 News
 
 - **\[2026/05\]** Technical report released.
+- **\[2026/05\]** 1k Resolution Training code & Inference code & weight & dataset released
 
 ---
 
@@ -34,8 +35,8 @@
 
 | Status | Item |
 | :---: | :--- |
-| 🛠️ | 1K inference code & weights |
-| 🛠️ | Training code |
+| ✅ | 1K inference code & weights |
+| ✅ | Training code |
 | 🛠️ | 4K/8K/10K UHR generation |
 | 🛠️ | Compatibility with more LDM T2I model |
 
@@ -43,38 +44,16 @@
 
 ## 📦 Installation
 
-<!-- ```bash
-# 1. Clone the repository
-git clone https://github.com/<your-org>/L2P.git
-cd L2P
-
-# 2. (Recommended) Create a clean Python environment
-conda create -n l2p python=3.10 -y
-conda activate l2p
-
-# 3. Install the package in editable mode (reads dependencies from pyproject.toml)
+```bash
+git clone https://github.com/TencentYoutuResearch/T2I-L2P.git
+cd T2I-L2P
 pip install -e .
-``` -->
+```
 
 
 ---
 
-<!--
-## 🗂️ Pretrained Weights
 
-Download the following assets and place them under `ckpt/` and `models/` (paths can be customized in the scripts):
-
-| Component | Source |
-| :--- | :--- |
-| L2P main DiT (1K) | *(release link coming soon)* |
-| Z-Image text encoder | [`Z-Image-Turbo/text_encoder`](https://huggingface.co/) |
-| Z-Image tokenizer | [`Z-Image-Turbo/tokenizer`](https://huggingface.co/) |
-| Pixel-space initialization | `Z-Image-Pixel-Init/diffusion_pytorch_model.safetensors` |
-
-Then update the paths inside `inference.py` / `train_run.sh` accordingly.
-
----
--->
 
 ## 🎨 Inference
 ```python
