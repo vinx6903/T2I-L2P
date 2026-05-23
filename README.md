@@ -12,6 +12,9 @@
   <a href="https://huggingface.co/datasets/zhen-nan/L2P-dataset">
     <img src="https://img.shields.io/badge/Dataset-L2P-ffcc4d?style=for-the-badge&logo=huggingface&logoColor=white" alt="Dataset">
   </a>
+  <a href="https://huggingface.co/spaces/multimodalart/z-image-6b-pixel-space">
+    <img src="https://img.shields.io/badge/HF-Space-ff9d00?style=for-the-badge&logo=huggingface&logoColor=white" alt="HF Space">
+  </a>
 </p>
 
 <p>
@@ -29,8 +32,9 @@
 
 ## 📰 News
 
-- **\[2026/05\]** Technical report released.
-- **\[2026/05\]** 1k Resolution Training code & Inference code & weight & dataset released
+- **\[2026.05.12\]** Technical report released.
+- **\[2026.05.22\]** 1K-resolution training code, inference code, weights, and dataset released.
+- **\[2026.05.23\]** Online [demo](https://huggingface.co/spaces/multimodalart/z-image-6b-pixel-space). (Thanks to [multimodalart](https://huggingface.co/multimodalart) for the support!)
 
 ---
 
@@ -41,7 +45,7 @@
 | ✅ | 1K inference code & weights |
 | ✅ | Training code |
 | 🛠️ | 4K/8K/10K UHR generation |
-| 🛠️ | Compatibility with more LDM T2I model |
+| 🛠️ | Compatibility with more LDM model|
 
 ---
 
